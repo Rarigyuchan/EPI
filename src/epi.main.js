@@ -1,6 +1,9 @@
 /**
  * ExtendedProgrammingInterface (EPI)
  * 
+ * Licensed under the MIT Open Source license.
+ *     See LICENSE.md for the full text.
+ * 
  *     The extended programming interface or EPI defines a set of methods that
  * makes fetching certain bits of data from the API easier than it is by
  * turning large AJAX calls into simple one liners using Promises to eliminate

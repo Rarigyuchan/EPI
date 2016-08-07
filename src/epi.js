@@ -19,15 +19,6 @@
  * EPI as well as how to use it within your own scripts.
  * 
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
- * 
- * Current methods:
- *     _http:
- *         ajax
- *     user:
- *         action:
- *             ban
- *         info:
- *             userid
  */
 
 /**

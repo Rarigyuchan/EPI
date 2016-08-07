@@ -7,7 +7,7 @@
 //#end
 
 /**
- * EPI::user::action::block
+ * EPI::user::block
  * 
  * Blocks a user from the wiki if they are admin
  * 
@@ -24,14 +24,15 @@
  *                       }
  * @return [Promise]
  */
-epi.user.action.block = function(data) {
+epi.user.block = function(data) {
     return new Promise(function(resolve, reject) {
         epi._http.ajax({
             url:        mw.util.wikiScript('api'),
             type:       'POST',
             dataType:   'JSON',
-            success:    (data) => resolve(data),
-            error:      (data) => reject(data['error']),
+            error:      (data) => reject(data),
+            success:    (data) => (data.error) ? reject(data['error'])
+                                               : resolve(data['block']),
             beforeSend: function(xhr, settings) {
                 if (data.nocreate) settings.data += '&nocreate';
                 if (data.autoblock) settings.data += '&autoblock';

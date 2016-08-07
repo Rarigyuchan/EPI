@@ -59,9 +59,9 @@
     }, epi = ExtendedProgrammingInterface;
 
     //#include "./http/ajax.js"
-    //#include "./user/action/ban.js"
-    //#include "./user/action/block.js"
-    //#include "./user/info/userid.js"
+    //#include "./user/ban.js"
+    //#include "./user/block.js"
+    //#include "./user/getUserId.js"
 
     if (typeof window.ExtendedProgrammingInterface === 'undefined') {
         window.ExtendedProgrammingInterface = ExtendedProgrammingInterface;

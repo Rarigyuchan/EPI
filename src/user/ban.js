@@ -7,7 +7,7 @@
 //#end
 
 /**
- * EPI::user::action::ban
+ * EPI::user::ban
  * 
  * Bans a user from chat (if user is admin or mod)
  * 
@@ -18,14 +18,15 @@
  *                       }
  * @return [Promise]
  */
-epi.user.action.ban = function(data) {
+epi.user.ban = function(data) {
     return new Promise(function(resolve, reject) {
         epi._http.ajax({
             url:      mw.util.wikiScript('index'),
             type:     'POST',
             dataType: 'JSON',
-            success:  (data) => resolve(data),
             error:    (data) => reject(data),
+            success:  (data) => (data.error) ? reject(data)
+                                             : resolve(data),
             data:     {
 	                      action:      'ajax',
 	                      rs:          'ChatAjax',

@@ -7,7 +7,7 @@
 //#end
 
 /**
- * EPI::user::getId
+ * EPI::user::info::userid
  * 
  * Get a user's ID from the API
  * 
@@ -19,7 +19,7 @@
  * @param [String] user: username of the user to get the ID of
  * @return [Promise]
  */
-epi.user.getId = function(user) {
+epi.user.info.userid = function(user) {
     return new Promise(function(resolve, reject) {
         epi._http.ajax({
             url:      mw.util.wikiScript('api'),

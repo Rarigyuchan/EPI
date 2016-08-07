@@ -53,13 +53,14 @@
 
 (function(window, $, mw) {
     var ExtendedProgrammingInterface = {
-        _html: {},
+        _http: {},
         user:  { info: {}, action: {} },
         wall:  {}
     }, epi = ExtendedProgrammingInterface;
 
     //#include "./http/ajax.js"
     //#include "./user/action/ban.js"
+    //#include "./user/action/block.js"
     //#include "./user/info/userid.js"
 
     if (typeof window.ExtendedProgrammingInterface === 'undefined') {

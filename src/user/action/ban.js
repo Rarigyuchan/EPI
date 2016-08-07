@@ -12,13 +12,13 @@
  * Bans a user from chat (if user is admin or mod)
  * 
  * @param [Object] data: {
- *                           'userId':    [Number],
+ *                           'userId':   [Number],
  *                           'duration': [Number],
- *                           'reason':    [String]
+ *                           'reason':   [String]
  *                       }
  * @return [Promise]
  */
-epi.user.chatBan = function(data) {
+epi.user.action.ban = function(data) {
     return new Promise(function(resolve, reject) {
         epi._http.ajax({
             url:      mw.util.wikiScript('index'),

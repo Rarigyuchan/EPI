@@ -37,12 +37,12 @@ epi.user.action.block = function(data) {
                 if (data.autoblock) settings.data += '&autoblock';
             },
             data:       {
-	                        action:    'block',
+                            action:    'block',
                             user:      data.username,
                             expiry:    data.duration,
                             reason:    data.reason,
                             format:    'json',
-	                        token:     mw.user.tokens.get('editToken')
+                            token:     mw.user.tokens.get('editToken')
                         }
         });
     });
